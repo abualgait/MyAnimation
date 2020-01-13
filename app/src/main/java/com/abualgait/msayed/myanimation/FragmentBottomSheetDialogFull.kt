@@ -66,7 +66,7 @@ class FragmentBottomSheetDialogFull : BottomSheetDialogFragment() {
         }
 
 
- 
+
         appBarLayout.addOnOffsetChangedListener(listener)
     }
     override fun onStart() {
