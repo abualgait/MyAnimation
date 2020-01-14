@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:minHeight="80dp"
-                app:layoutDescription="@xml/step8"
+                app:layoutDescription="@xml/gmail_profile_scene"
                 app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
                 app:motionDebug="SHOW_PATH">
 

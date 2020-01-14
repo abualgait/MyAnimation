@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- A transition describes an animation via start and end state -->
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+
+        app:duration="2000">
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/dayImage" />
+
+        <KeyFrameSet>
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/sunImage"
+                app:percentY="0.30" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/moonImage"
+                app:percentY="0.20" />
+
+            <KeyPosition
+                app:framePosition="25"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/moonImage"
+                app:percentY="0.30" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                app:framePosition="50"
+                app:motionTarget="@id/moonImage" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                app:framePosition="0"
+                app:motionTarget="@id/sunImage" />
+
+
+            <KeyAttribute
+                android:alpha="1.0"
+                app:framePosition="10"
+                app:motionTarget="@id/sunImage" />
+
+
+            <KeyAttribute
+                android:alpha="0.0"
+                app:framePosition="50"
+                app:motionTarget="@id/dayImage" />
+
+
+            <KeyAttribute
+                android:alpha="1.0"
+                app:framePosition="50"
+                app:motionTarget="@id/nightImage" />
+
+
+        </KeyFrameSet>
+    </Transition>
+
+    <!-- Constraints to apply at the start of the animation -->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/sunImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sun" />
+
+
+        <Constraint
+            android:id="@id/moonImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            app:srcCompat="@drawable/ic_moon" />
+
+
+    </ConstraintSet>
+
+    <!-- Constraints to apply at the end of the animation -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/sunImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <Constraint
+            android:id="@id/moonImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/ic_moon" />
+
+    </ConstraintSet>
+</MotionScene>
+
+    <!--            <KeyPosition-->
+    <!--                app:framePosition="35"-->
+    <!--                app:keyPositionType="parentRelative"-->
+    <!--                app:motionTarget="@id/sunImage"-->
+    <!--                app:percentY="0.45" />-->
+    <!--            <KeyPosition-->
+    <!--                app:framePosition="50"-->
+    <!--                app:keyPositionType="parentRelative"-->
+    <!--                app:motionTarget="@id/sunImage"-->
+    <!--                app:percentY="0.25" />-->
+
+
+    <!--            <KeyPosition-->
+    <!--                app:framePosition="50"-->
+    <!--                app:keyPositionType="parentRelative"-->
+    <!--                app:motionTarget="@id/moonImage"-->
+    <!--                app:percentY="0.25" />-->
+
+    <!--            <KeyPosition-->
+    <!--                app:framePosition="65"-->
+    <!--                app:keyPositionType="parentRelative"-->
+    <!--                app:motionTarget="@id/sunImage"-->
+    <!--                app:percentY="0.45" />-->
+    <!--            <KeyPosition-->
+    <!--                app:framePosition="75"-->
+    <!--                app:keyPositionType="parentRelative"-->
+    <!--                app:motionTarget="@id/sunImage"-->
+    <!--                app:percentY="0.75" />-->
