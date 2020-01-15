@@ -5,8 +5,7 @@
     <Transition
         app:constraintSetEnd="@+id/end"
         app:constraintSetStart="@+id/start"
-
-        app:duration="2000">
+        app:duration="3000">
 
         <OnClick
             app:clickAction="toggle"
@@ -16,51 +15,47 @@
 
             <KeyPosition
                 app:framePosition="50"
-                app:keyPositionType="pathRelative"
+                app:keyPositionType="parentRelative"
                 app:motionTarget="@id/sunImage"
-                app:percentY="0.30" />
+                app:percentY="0.10" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                app:framePosition="50"
+                app:motionTarget="@id/sunImage" />
+
 
             <KeyPosition
                 app:framePosition="50"
                 app:keyPositionType="parentRelative"
                 app:motionTarget="@id/moonImage"
-                app:percentY="0.20" />
-
-            <KeyPosition
-                app:framePosition="25"
-                app:keyPositionType="parentRelative"
-                app:motionTarget="@id/moonImage"
-                app:percentY="0.30" />
+                app:percentY="0.10" />
 
             <KeyAttribute
                 android:alpha="0.0"
                 app:framePosition="50"
                 app:motionTarget="@id/moonImage" />
 
-            <KeyAttribute
-                android:alpha="0.0"
-                app:framePosition="0"
-                app:motionTarget="@id/sunImage" />
 
 
-            <KeyAttribute
-                android:alpha="1.0"
-                app:framePosition="10"
-                app:motionTarget="@id/sunImage" />
 
+            <KeyPosition
+                app:framePosition="30"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/imageView5"
+                app:percentY="0.45" />
 
-            <KeyAttribute
-                android:alpha="0.0"
+            <KeyPosition
                 app:framePosition="50"
-                app:motionTarget="@id/dayImage" />
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/imageView5"
+                app:percentY="0.50" />
 
-
-            <KeyAttribute
-                android:alpha="1.0"
-                app:framePosition="50"
-                app:motionTarget="@id/nightImage" />
-
-
+            <KeyPosition
+                app:framePosition="70"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/imageView5"
+                app:percentY="0.45" />
         </KeyFrameSet>
     </Transition>
 
@@ -71,10 +66,11 @@
             android:id="@id/sunImage"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:alpha="0.0"
+            android:alpha="1.0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/sun" />
 
 
@@ -83,14 +79,66 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:alpha="0.0"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/nightImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/ic_moon" />
 
+        <Constraint
+            android:id="@id/dayImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1.0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dayimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@id/nightImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nightimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/imageView3"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/car" />
+
+        <Constraint
+            android:id="@id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:alpha="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cloud" />
+
+        <Constraint
+            android:id="@id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:alpha="1.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/birds" />
     </ConstraintSet>
 
     <!-- Constraints to apply at the end of the animation -->
@@ -102,9 +150,8 @@
             android:alpha="0.0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.25" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <Constraint
             android:id="@id/moonImage"
@@ -113,37 +160,63 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/ic_moon" />
+
+        <Constraint
+            android:id="@id/dayImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dayimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@id/nightImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="1.0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nightimage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@id/imageView3"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/car" />
+
+        <Constraint
+            android:id="@id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:alpha="1.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cloud" />
+
+        <Constraint
+            android:id="@id/imageView5"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/birds" />
 
     </ConstraintSet>
 </MotionScene>
-
-    <!--            <KeyPosition-->
-    <!--                app:framePosition="35"-->
-    <!--                app:keyPositionType="parentRelative"-->
-    <!--                app:motionTarget="@id/sunImage"-->
-    <!--                app:percentY="0.45" />-->
-    <!--            <KeyPosition-->
-    <!--                app:framePosition="50"-->
-    <!--                app:keyPositionType="parentRelative"-->
-    <!--                app:motionTarget="@id/sunImage"-->
-    <!--                app:percentY="0.25" />-->
-
-
-    <!--            <KeyPosition-->
-    <!--                app:framePosition="50"-->
-    <!--                app:keyPositionType="parentRelative"-->
-    <!--                app:motionTarget="@id/moonImage"-->
-    <!--                app:percentY="0.25" />-->
-
-    <!--            <KeyPosition-->
-    <!--                app:framePosition="65"-->
-    <!--                app:keyPositionType="parentRelative"-->
-    <!--                app:motionTarget="@id/sunImage"-->
-    <!--                app:percentY="0.45" />-->
-    <!--            <KeyPosition-->
-    <!--                app:framePosition="75"-->
-    <!--                app:keyPositionType="parentRelative"-->
-    <!--                app:motionTarget="@id/sunImage"-->
-    <!--                app:percentY="0.75" />-->
