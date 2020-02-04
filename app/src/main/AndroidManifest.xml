@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProductiveFamilies"></activity>
+        <activity android:name=".PizzaZone"></activity>
+        <activity android:name=".ComplexAnimation" />
+        <activity android:name=".ValueAnimatorActivity" />
+        <activity android:name=".ProductiveFamilies" />
         <activity android:name=".DayNight" />
         <activity android:name=".GmailProfile" />
         <activity android:name=".MainActivity">

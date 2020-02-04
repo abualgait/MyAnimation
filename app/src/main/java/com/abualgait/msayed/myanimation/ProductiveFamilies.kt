@@ -10,6 +10,8 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
+import com.abualgait.msayed.myanimation.extensions.getPositionOnScreen
+import com.abualgait.msayed.myanimation.extensions.objectAnimator
 import kotlinx.android.synthetic.main.activity_productive_families.*
 
 

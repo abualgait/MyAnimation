@@ -25,5 +25,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ProductiveFamilies::class.java))
 
         }
+
+        button4.setOnClickListener {
+            startActivity(Intent(this, ValueAnimatorActivity::class.java))
+
+        }
+
+        complex.setOnClickListener {
+            startActivity(Intent(this, ComplexAnimation::class.java))
+
+        }
     }
 }

@@ -48,7 +48,7 @@
                     android:id="@+id/credits"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/credits"
+            
                     android:textColor="@android:color/white"
                     android:textSize="24sp" />
             </androidx.constraintlayout.motion.widget.MotionLayout>

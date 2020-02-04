@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
+        tools:layout_gravity="start"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:text="@string/app_name"
+                android:textColor="@color/windowBackground"
+                android:textSize="72sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/annie_use_your_telescope"
+                    android:includeFontPadding="false"
+                    android:text="Use MotionLayout:"
+                    android:textColor="#FFF"
+                    android:textSize="28sp" />
+
+                <CheckBox
+                    android:id="@+id/motion_layout_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:buttonTint="@color/colorAccent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:text="Animation Speed:"
+                android:textColor="#FFF"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/animation_speed_text"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="@font/annie_use_your_telescope"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0.1x"
+                    android:textColor="@color/windowBackground"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:text="View code:"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/github_code_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-8dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Github"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:text="Follow me:"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/github_me_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-8dp"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:includeFontPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Nikhil Panju (Github)"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</merge>
